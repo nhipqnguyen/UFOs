@@ -48,7 +48,7 @@ function updateFilters() {
     else {
       delete filters[filterId];
     }
-  
+    console.log(filters);
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
@@ -63,7 +63,8 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
     Object.entries(filters).forEach((idValue) => {
-      filteredData = filteredData.filter(observation => observation.idValue[0] === idValue[1]);
+      let id = idValue[0];
+      filteredData = filteredData.filter(observation => observation.id === idValue[1]);
     });
   
     // 10. Finally, rebuild the table using the filtered data
