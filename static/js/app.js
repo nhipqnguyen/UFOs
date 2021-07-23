@@ -62,22 +62,11 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    /*Object.entries(filters).forEach((idValue) => {
-      let id = idValue[0];
-      filteredData = filteredData.filter(observation => observation.id === idValue[1]);
-    });*/
-
-    /*filteredData = filteredData.filter((observation) => {
-      Object.values(filters).forEach((filterValue) => {
-        Object.values(observation).forEach(value => value == filterValue)
-      })
-    });*/
-    filteredData = filteredData.filter((el) => {
-      return myFilter.some((f) => {
-        return f.userid === el.userid && f.projectid === el.projectid;
+    filteredData = filteredData.filter(function (obs) {
+      return Object.keys(filters).every(function (key) {
+        return obs[key] === filters[key];
       });
-    });
-    
+    });    
 
     console.log(filteredData);
   

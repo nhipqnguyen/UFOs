@@ -13,9 +13,11 @@ After creating the webpage with UFO sightings that allows user to filter the dat
 
   ![UFOs web page](https://github.com/nhipqnguyen/UFOs/blob/main/static/images/UFOs_webpage.png)
   
-- We can filter multiple criteria at the same time. We just need to type in the search term in each filter box in the given format and press Tab or Enter. For example, below is a screenshot of the web page after we type "el cajon" in the "city" filter box and "triangle" in the "shape" filter box.
+- We can filter multiple criteria at the same time. We just need to type in the search term in each filter box in the given format and press Tab or Enter. For example, below is a screenshot of the webpage after we type "el cajon" in the "city" filter box. The webpage returns 5 sightings that were spotted in El Cajon.
+
+- Next, we type "triangle" in the "shape" filter box and get only 2 sightings returned as shown below since the other 3's shapes were "formation" and "light".
   
-  ![Filtered UFOs](https://github.com/nhipqnguyen/UFOs/blob/main/static/images/filtered_UFOs_webpage.png)
+  ![Filtered City and Shape UFOs](https://github.com/nhipqnguyen/UFOs/blob/main/static/images/filtered_UFOs_webpage_2.png)
 
 ## Summary
 - One drawback of this webpage is that though it allows users to filter sightings based on multiple criteria, it does not have a sort button that allows users to sort the data in different ways/ columns.
